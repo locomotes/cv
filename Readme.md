@@ -1,3 +1,9 @@
-## Yo, I'm a Readme
+Interactive cv for for your friends in academia who can't web design good.
 
-You should probably update me so people looking at your code have an idea what it is being used for :)
+# License 
+
+Copyright (c) 2014 Jonathan Dickerson
+
+Licensed under the MIT license.
+
+http://www.driiven.com
