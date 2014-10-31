@@ -4,7 +4,7 @@
 
 // Custom Styles
 
-$mobile: new-breakpoint(max-width 768px);
+$mobile: new-breakpoint(min-width 768px);
 
 @mixin border {
   border: 1px solid black;
@@ -23,31 +23,80 @@ body {
 
 .inner-cont {
   @include border;
-  width: 80%;
+  width: 100%;
   margin: 0 auto;
   text-align: center;
   height: 500px;
   @include media($mobile) {
-    width: 100%;
+    width: 80%;
   }
 }
 
-// .slicknav_menu {
-// display: none;
-// }
-//  @media screen and (max-width: 500px) {
-// .js #menu {
-// display: none;
-// }
-// .js .slicknav_menu {
-// display: block;
-// }
+// ########### Begin Mobile Navigation Bar -->
 
-// header {
-//   @include span-columns(12 of 12);
-//   @include border;
-//   height: 90px;
-// }
+.slicknav_menu {
+  font-size: 19px;
+  margin-top: 2px;
+  @include media($mobile) {
+    display: none;
+  }
+}
+
+.slicknav_menutxt {
+  margin: 3.2px;
+  font-size: 16px;
+}
+
+.slicknav_icon-bar {
+  margin: 3.2px;
+  width: 1.3em;
+  height: 0.155em;
+}
+
+.slicknav_nav a {
+  font-size: 1.15em;
+}
+
+// ########### End Mobile Navigation Bar -->
+
+// ########### Begin Desktop Navigation Bar -->
+
+#navigate {
+  #navigate-inner-cont {
+    #menu {
+      display: none;
+      li {
+        @include media($mobile) {
+          display: inline;
+          a {
+            text-decoration: none;
+          }
+        }
+      }
+      @include media($mobile) {
+        list-style-type: none;
+        display: inline;
+      }
+    }
+    @include media($mobile) {
+      width: 80%;
+      height: 45px;
+      margin: 0 auto;
+      background-color: white;
+      margin-top: 30px;
+    }
+  }
+  @include media($mobile) {
+    @include span-columns (12 of 12);
+    @include border;
+    height: 100px;
+    background-color: black;
+  }
+}
+
+
+// ########### End Desktop Navigation Bar -->
+
 
 .hero-container {
   .hero-unit {
