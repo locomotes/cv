@@ -19,10 +19,12 @@ body {
 
 .container {
   @include span-columns(12 of 12);
+  @include border;
 }
 
 .inner-cont {
   width: 100%;
+  @include border;
   margin: 0 auto;
   text-align: center;
   height: 500px;
@@ -66,27 +68,32 @@ body {
   @include span-columns(12 of 12);
   background: rgba(0, 0, 0, 0.7);
   position: fixed;
-  @include border;
+  // @include border;
   display: none;
   height: 60px;
-  #menu {
-    text-align: right;
+  #navigate-inner-cont {
     margin: 0 auto;
-    margin-top: 20px;
-    @include border;
-    height: 40px;
     width: 80%;
-    li {
-      list-style-type: none;
-      display: inline;
-      font-size: 20px;
-      padding: 10px;
-      a {
-        text-decoration: none;
-        color: white;
-      }
-      a:hover {
-        color: blue;
+    #menu {
+      text-align: right;
+      margin: 0 auto;
+      margin-top: 20px;
+      // @include border;
+      height: 40px;
+      @include span-columns(12 of 12);
+      // @include border;
+      li {
+        list-style-type: none;
+        display: inline;
+        font-size: 20px;
+        padding: 10px;
+        a {
+          text-decoration: none;
+          color: white;
+        }
+        a:hover {
+          color: blue;
+        }
       }
     }
   }
@@ -97,21 +104,35 @@ body {
 
 // ########### End Desktop Navigation Bar -->
 
+// ########### Begin Hero Section -->
+
 
 .hero-container {
+  .name-cont {
+  //   background: rgba(0, 0, 0, 0.7);
+    position: fixed;
+    width: 100%;
+    margin-top: 60px;
+    display: none;
+    .name-inner-cont {
+      // @include border;
+      margin: 0 auto;
+      // height: 40px;
+      width: 80%; 
+      h1 {
+        margin: 0px;
+        // margin-top: -45px;
+      }
+      // @include media($mobile) {
+      //   display: block;
+      //   width: 80%;
+      // }
+    }
+    @include media($mobile){
+      display: block;
+    }
+  }
   .hero-unit {
-    @include border;
-    text-align: center;
-    // .mobile-hero-name {
-    //   background: rgba(0, 0, 0, 0.7);
-    //   @include border;
-    //   h1 {
-    //     color: white;
-    //   }
-    //   @include media($mobile) {
-    //     display: none;
-    //   }
-    // }
   }
 }
 
