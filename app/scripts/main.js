@@ -3,7 +3,7 @@
 // skicknav settings 
 
 $(document).ready(function(){
-  $('#menu-cont').slicknav({
+  $('header').slicknav({
     'label' : 'MENU', // Label for menu button. Use an empty string for no label.
     'duplicate': true, // If true, the mobile menu is a copy of the original.
     'duration': true, // The duration of the sliding animation.
@@ -13,4 +13,5 @@ $(document).ready(function(){
     // 'closeOnClick': false // Close menu when a link is clicked.
 	});
 });
+
 

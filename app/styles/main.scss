@@ -34,6 +34,8 @@ body {
 // ########### Begin Mobile Navigation Bar -->
 
 .slicknav_menu {
+  position: fixed;
+  width: 100%;
   font-size: 19px;
   margin-top: 2px;
   @include media($mobile) {
@@ -60,48 +62,38 @@ body {
 
 // ########### Begin Desktop Navigation Bar -->
 
-// #navigate {
-//   #navigate-inner-cont {
-//       #menu-cont {
-//         text-align: center;
-//         // #menu {
-//   //       //   display: none;
-//   //       //   li {
-//   //       //     padding: 10px;
-//   //       //     font-size: 20px;
-//   //       //     margin-top: 5px;
-//   //       //     @include media($mobile) {
-//   //       //       display: inline;
-//   //       //       a {
-//   //       //         text-decoration: none;
-//   //       //       }
-//   //       //     }
-//   //       //   }
-//   //       //   @include media($mobile) {
-//   //       //     list-style-type: none;
-//   //       //     display: inline;
-//   //       //   }
-//   //       // }
-//   //     }
-//   //     @include media($mobile) {
-//   //       @include span-columns(12 of 12);
-//   //     }
-//   //   }
-//     // @include media($mobile) {
-//     //   width: 80%;
-//     //   height: 45px;
-//     //   margin: 0 auto;
-//     //   background-color: white;
-//     //   margin-top: 30px;
-//     // }
-//   }
-//   @include media($mobile) {
-//     @include span-columns (12 of 12);
-//     height: 100px;
-//     background: rgba(0, 0, 0, 0.7);
-//   }
-// }
-
+#navigate {
+  @include span-columns(12 of 12);
+  background: rgba(0, 0, 0, 0.7);
+  position: fixed;
+  @include border;
+  display: none;
+  height: 60px;
+  #menu {
+    text-align: right;
+    margin: 0 auto;
+    margin-top: 20px;
+    @include border;
+    height: 40px;
+    width: 80%;
+    li {
+      list-style-type: none;
+      display: inline;
+      font-size: 20px;
+      padding: 10px;
+      a {
+        text-decoration: none;
+        color: white;
+      }
+      a:hover {
+        color: blue;
+      }
+    }
+  }
+  @include media($mobile) {
+    display: block;
+  }
+}
 
 // ########### End Desktop Navigation Bar -->
 
@@ -110,16 +102,16 @@ body {
   .hero-unit {
     @include border;
     text-align: center;
-    .mobile-hero-name {
-      background: rgba(0, 0, 0, 0.7);
-      @include border;
-      h1 {
-        color: white;
-      }
-      @include media($mobile) {
-        display: none;
-      }
-    }
+    // .mobile-hero-name {
+    //   background: rgba(0, 0, 0, 0.7);
+    //   @include border;
+    //   h1 {
+    //     color: white;
+    //   }
+    //   @include media($mobile) {
+    //     display: none;
+    //   }
+    // }
   }
 }
 
